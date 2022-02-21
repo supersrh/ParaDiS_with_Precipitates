@@ -1,0 +1,61 @@
+61c61
+< SYS = linux.pc
+---
+> SYS = franklin
+75c75
+< # XLIB_MODE = OFF
+---
+>  XLIB_MODE = OFF
+77c77
+< XLIB_MODE = OFF
+---
+> #XLIB_MODE = ON
+88,90c88,91
+< # OPT = -g -pg -O2
+< # OPT = -O 
+< # OPT = -O1
+---
+> #
+> #OPT = -g -pg -O2
+> # OPT = -O -g 
+> OPT = -O1 
+92c93
+< OPT = -O3
+---
+> #OPT = -O0 .g
+108c109
+< # OPENMP_MODE = ON
+---
+> #OPENMP_MODE = ON
+135c136
+< # DEFS += -DNAN_CHECK
+---
+>  DEFS += -DNAN_CHECK
+154c155
+< #
+---
+> #testaa
+187c188
+< # DEFS += -DNO_THREAD
+---
+> #DEFS += -DNO_THREAD
+193c194
+< # DEFS += -DDEBUG_STEP
+---
+> #DEFS += -DDEBUG_STEP
+195,197c196,198
+< # DEFS += -DDEBUG_NODAL_TIMESTEP
+< # DEFS += -DDEBUG_TIMESTEP_ERROR
+< # DEFS += -DDEBUG_MEM
+---
+>  #DEFS += -DDEBUG_NODAL_TIMESTEP
+>  #DEFS += -DDEBUG_TIMESTEP_ERROR
+>  #DEFS += -DDEBUG_MEM
+206c207
+< # DEFS += -DDEBUG_TOPOLOGY_CHANGES -DDEBUG_TOPOLOGY_DOMAIN=-1
+---
+>  #DEFS += -DDEBUG_TOPOLOGY_CHANGES -DDEBUG_TOPOLOGY_DOMAIN=-1
+226c227
+< 
+---
+> #DEFS+= -DVEL_STATISTICS

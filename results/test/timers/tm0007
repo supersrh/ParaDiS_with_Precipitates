@@ -1,0 +1,40 @@
+cycle number :    71
+domain geometry : 1 x 1 x 1
+cell geometry :   8 x 8 x 8
+
+                             min         max        avg     avg/max
+
+total time           	   56.467      56.467      56.467    1.000
+initialization time  	    0.774       0.774       0.774    1.000
+sort native nodes    	    0.004       0.004       0.004    1.000
+comm send ghosts     	    0.000       0.000       0.000    1.000
+sync after ghost comm	    0.000       0.000       0.000    1.000
+cell charge          	    0.017       0.017       0.017    1.000
+sync after cell charge	    0.000       0.000       0.000    1.000
+nodal force          	   54.086      54.086      54.086    1.000
+  local seg force    	   30.418      30.418      30.418    1.000
+  remote seg force   	   23.655      23.655      23.655    1.000
+sync after force calc	    0.000       0.000       0.000    1.000
+nodal velocity       	    0.130       0.130       0.130    1.000
+sync after vel calc  	    0.000       0.000       0.000    1.000
+comm send velocity   	    0.000       0.000       0.000    1.000
+split multi-nodes    	    0.004       0.004       0.004    1.000
+handle collisions    	    0.137       0.137       0.137    1.000
+barrier after col    	    0.000       0.000       0.000    1.000
+send col topo changes	    0.000       0.000       0.000    1.000
+apply col topo changes	    0.000       0.000       0.000    1.000
+collision force adj. 	    0.000       0.000       0.000    1.000
+generate all output  	    0.970       0.970       0.970    1.000
+  X window plot      	    0.000       0.000       0.000    1.000
+sync after I/O       	    0.000       0.000       0.000    1.000
+sync before remesh   	    0.000       0.000       0.000    1.000
+remesh dislocations  	    0.030       0.030       0.030    1.000
+send remesh changes  	    0.000       0.000       0.000    1.000
+apply remesh changes 	    0.000       0.000       0.000    1.000
+remesh force adj.    	    0.000       0.000       0.000    1.000
+sync after remesh    	    0.000       0.000       0.000    1.000
+migration            	    0.000       0.000       0.000    1.000
+sync after migration 	    0.000       0.000       0.000    1.000
+load curve           	    0.000       0.000       0.000    1.000
+load balance         	    0.000       0.000       0.000    1.000
+segment force comm   	    0.000       0.000       0.000    1.000

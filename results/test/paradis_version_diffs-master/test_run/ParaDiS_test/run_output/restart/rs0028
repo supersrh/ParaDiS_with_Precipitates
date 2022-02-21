@@ -1,0 +1,243 @@
+########################################
+###                                  ###
+###  ParaDiS control parameter file  ###
+###                                  ###
+########################################
+
+#
+#  Simulation cell and processor setup
+#  
+numXdoms =   4  
+numYdoms =   2  
+numZdoms =   2  
+numXcells =   4  
+numYcells =   4  
+numZcells =   4  
+xBoundType =   0  
+yBoundType =   0  
+zBoundType =   0  
+decompType =   1  
+DLBfreq =   3  
+#
+#  Simulation time and timestepping controls
+#  
+cycleStart =   135000  
+maxstep =   10000000  
+timeNow =   1.518229e-09  
+timeStart =   1.518222e-09  
+timestepIntegrator =   "trapezoid"  
+deltaTT =   7.245480e-15  
+maxDT =   1.000000e-10  
+stopTime =   1.000000e-07  
+relaxTime =   1.000000e-06  
+nextDT =   7.245480e-15  
+dtIncrementFact =   1.200000e+00  
+dtDecrementFact =   5.000000e-01  
+dtExponent =   4.000000e+00  
+dtVariableAdjustment =   1  
+rTol =   7.250000e-01  
+#
+#  Discretization and topological change controls
+#  
+maxSeg =   4.000000e+01  
+minSeg =   5.000000e-01  
+remeshRule =   3  
+splitMultiNodeFreq =   1  
+collisionMethod =   2  
+#
+#  Fast Multipole Method controls
+#  
+fmEnabled =   1  
+fmMPOrder =   2  
+fmTaylorOrder =   5  
+fmCorrectionTbl =   "/home/salmenh1/3d_ddd/paradis_grand_challenge/paradisgeneral/inputs/ironfred2mt5cs3000.data"  
+#
+#  Tables for non-FMM far-field force calcs
+#  
+Rijmfile =   "/home/salmenh1/3d_ddd/paradis_grand_challenge/paradisgeneral/inputs/Rijmcs170e0.cube.out"  
+RijmPBCfile =   "/home/salmenh1/3d_ddd/paradis_grand_challenge/paradisgeneral/inputs/Rijmcs170e0pbc.cube.out"  
+#
+#  Loading conditions
+#  
+TempK =   7.500000e+02  
+loadType =   1  
+appliedStress = [
+  6.051322e-03
+  7.982221e-03
+  3.007750e+08
+  -1.254704e+03
+  1.078681e+03
+  -6.889497e-03
+  ]
+eRate =   1.000000e+06  
+indxErate =   1  
+edotdir = [
+  9.726335e-06
+  -9.321458e-06
+  1.000000e+00
+  ]
+cTimeOld =   1.000000e-09  
+dCyclicStrain =   1.000000e-11  
+stressAmp =   2.000000e+06  
+stressFreq =   3.000000e+07  
+stresscomponentIndex =   1  
+avalancheLimit =   0.000000e+00  
+stressRate =   0.000000e+00  
+vintegWindow =   1.000000e-12  
+nbrListFreq =   20  
+netCyclicStrain =   0.000000e+00  
+eAmp =   1.000000e-05  
+useLabFrame =   0  
+labFrameXDir = [
+  -1.000000e+00
+  -1.000000e+00
+  2.000000e+00
+  ]
+labFrameYDir = [
+  1.000000e+00
+  1.000000e+00
+  1.000000e+00
+  ]
+labFrameZDir = [
+  1.000000e+00
+  -1.000000e+00
+  0.000000e+00
+  ]
+#
+#  Material and mobility parameters
+#  
+mobilityLaw =   "BCC_0"  
+shearModulus =   7.500000e+10  
+pois =   3.790000e-01  
+burgMag =   2.502000e-10  
+YoungModulus =   2.068500e+11  
+rc =   2.900000e+00  
+Ecore =   1.840000e+10  
+MobScrew =   6.036000e+03  
+MobEdge =   6.036000e+03  
+MobClimb =   1.000000e-05  
+includeInertia =   0  
+#
+#  Flux decomposition
+#  
+totstraintensor = [
+  1.436262e-13
+  1.319177e-13
+  1.518222e-03
+  -1.415204e-08
+  1.476674e-08
+  -1.376475e-13
+  ]
+totpStn = [
+  -1.178656e-04
+  -6.964773e-05
+  1.875204e-04
+  -1.561649e-04
+  5.947809e-05
+  -4.245927e-05
+  ]
+totpSpn = [
+  0.000000e+00
+  0.000000e+00
+  0.000000e+00
+  -1.596899e-05
+  1.637508e-04
+  -1.615448e-05
+  ]
+Ltot = [
+  1.844707e+13
+  1.275094e+12
+  1.450424e+12
+  7.593823e+11
+  1.844570e+13
+  1.673482e+12
+  1.146234e+12
+  5.692002e+11
+  1.844568e+13
+  9.154029e+11
+  7.014000e+11
+  9.969090e+11
+  1.844568e+13
+  1.137349e+12
+  1.451733e+12
+  7.597474e+11
+  ]
+fluxtot = [
+  -8.310787e-03
+  -1.406026e+04
+  -7.068237e+03
+  -1.569465e+03
+  -8.743339e+03
+  1.781835e+03
+  5.362463e+03
+  -3.126447e-05
+  1.623551e+04
+  -8.117851e+03
+  1.412570e+03
+  4.401321e+03
+  -2.009767e+03
+  6.741238e+03
+  1.059278e-03
+  1.419646e+04
+  -3.404158e+03
+  2.997729e+03
+  6.211957e+03
+  2.215067e+03
+  -4.705349e+03
+  -4.644782e-03
+  -1.548472e+04
+  -8.839498e+03
+  3.780289e+02
+  -1.005612e+04
+  5.260859e+02
+  -7.605598e+03
+  ]
+#
+#  Total density. Informational only; ignored on input
+#  
+disloDensity =   7.547170e+13  
+#
+#  Velocity statistics
+#  
+vAverage =   3.537975e-04  
+vStDev =   1.563527e+00  
+#
+#  I/O controls and parameters
+#  
+dirname =   "/scratch/work/salmenh1/3d_ddd/triton_runs/ParaDiS_test"  
+writeBinRestart =   0  
+skipIO =   0  
+numIOGroups =   1  
+armfile =   0  
+fluxfile =   0  
+fragfile =   0  
+gnuplot =   1  
+gnuplotfreq =   5000  
+gnuplotcounter =   27  
+polefigfile =   0  
+povray =   1  
+povrayfreq =   5000  
+povraydt =   1.000000e-11  
+povraytime =   1.511477e-09  
+povraycounter =   160  
+psfile =   0  
+savecn =   1  
+savecnfreq =   5000  
+savecntime =   1.000000e-15  
+savecncounter =   28  
+saveprop =   1  
+savepropdt =   1.000000e-12  
+saveproptime =   1.517438e-09  
+savetimers =   0  
+tecplot =   0  
+velfile =   0  
+writeForce =   0  
+writeVisit =   0  
+winDefaultsFile =   "inputs/paradis.xdefaults"  
+#
+#  Miscellaneous parameters
+#  
+enforceGlidePlanes =   0  
+enableCrossSlip =   0  
+TensionFactor =   1.000000e+00  
+elasticinteraction =   1  

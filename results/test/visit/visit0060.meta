@@ -1,0 +1,10 @@
+#
+#  ParaDiS metadata file for VisIt output
+#
+PARADIS PARALLEL 1.0
+
+#
+#  Description of contents
+#
+DESCRIPTION "This is a dummy description..."
+

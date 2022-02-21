@@ -1,0 +1,13 @@
+#!/bin/bash
+#Running:
+#ID      NAME                         PART.  QOS       CPU  WALLTIME     REMAIN      NODES
+#22183 ryu       20   0  139080  83836   4804 R 100.0  0.0  30135:57 FCC_Nuc_Network 
+#22184 ryu       20   0  738220 682680   4508 R 100.0  0.3  30135:58 FCC_Nuc_Network
+#47535 ryu       20   0  638084 582720   4724 R 100.0  0.2  31585:31 FCC_Nuc_Network
+#47536 ryu       20   0  719724 664236   4664 R 100.0  0.3  31585:31 FCC_Nuc_Network
+#47537 ryu       20   0  605016 549400   4664 R 100.0  0.2  31585:14 FCC_Nuc_Network
+kill 22183 
+kill 22184
+kill 47535
+kill 47536
+kill 47537

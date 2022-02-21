@@ -1,0 +1,28 @@
+
+INPUT:
+
+paradis_default: 
+	*run_name*.ctrl -- file containing the control parameters (see ParaDiSUsersGuide-V2.5.1-Pub.pdf)
+	*run_name*.data -- file containing the initial nodal positions, neighbours and Burgers vectors of the discretized dislocations
+
+paradis_grand_challenge and paradis_optimized:
+	*run_name*.ctrl -- similar to the default version but with some possible additional parameter options (for instance implemented loading types such as the quasistatic stress ramp)	
+	*run_name*.data -- similar to the default version
+	*run_name*.pdata -- file containing the initial positions and parameters of the precipitates; follows the structure of the *.data file
+
+
+********************************
+
+OUTPUT:
+
+
+
+paradis_default:
+	see ParaDiSUsersGuide-V2.5.1-Pub.pdf
+
+paradis_grand_challenge:
+	writes also a file properties/avalanche which contains columns [time, average velocity, plastic strain, applied stress]
+
+paradis_optimized:
+	writes also a file properties/avalanche which contains columns [time, average velocity, plastic strain, applied stress, total dislocation length, integrated strain rate]
+	The average velocity is calculate as a segement weighted average velocity of dislocations. 

@@ -1,0 +1,35 @@
+
+paradis_default:
+	see ParaDiSUsersGuide-V2.5.1-Pub.pdf
+
+
+
+paradis_grand_challenge:
+
+	Required module commands in Sisu environment:
+
+		module load intel/14.0.4.211
+		module load cray-mpich/7.2.4
+
+	Running in Sisu:
+
+		aprun -n $ncores   /OWNPATH/paradis/bin/paradis /OWNPATH/OWNFILE.ctrl
+		
+		($ncores defines the number of cores used and it should equal the number of computational domains, i.e. numXdoms x numYdoms x numZdoms)	
+
+
+paradis_optimized:
+	
+
+	Required module commands in Sisu environment:
+	
+		module load craype-hugepages2M
+		module swap PrgEnv-cray PrgEnv-intel
+		module swap intel intel/16.0.2.181
+
+	Running in Sisu:
+
+		aprun -n $ncores -d $nthreads -j 1 -cc  /OWNPATH/paradis/bin/paradis /OWNPATH/OWNFILE.ctrl
+
+
+		(Now used cores is $ncores x $nthreads, where $ncores should again equal the number of computational domains, i.e. numXdoms x numYdoms x numZdoms)	

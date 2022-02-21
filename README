@@ -1,0 +1,69 @@
+	# ParaDiS with precipitates
+
+	I spent several days to get the program running.
+	
+	It is a ParaDiS 2.5.1 + modification of precipitates including. For ParaDiS, refer to https://github.com/minizmy/ParaDiS. For the modification, refer to https://e-cam.readthedocs.io/en/latest/Meso-Multi-Scale-Modelling-Modules/modules/paradis_precipitate/paradis_precipitate_GC/readme.html
+	
+	My running enviroment is as follows:
+	
+	Windows7, Cygwin 2.909 (64 bit) with gcc 11.2.0-1, libX11-devel 1.7.2-1, make 4.3-1
+	
+	## Tips of how to compile and run
+	
+	1. Delete /bin and all the *.o files in /src and /utilities
+	
+	2. Pay attention to the makefile.setup and makefile.sys. For me, I used an ordinary personal computer, so I choose gcc as the compiler and make sure 
+	
+	````CC_SERIAL.cygwin = gcc
+	
+        CPP_SERIAL.cygwin = g++
+	```
+
+	3. The files in the gcc should be modified, something like this:
+		
+	In the cpp_type_traits.h, do:
+	```
+	/*   template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    }; */
+	```
+	commenting out the code, otherwise, the struct __is_integer<bool> will be regarded as a redefination. Strange thing!
+	
+	4. Refer to http://paradis.stanford.edu/site/home and the user's guide in /docs. Good luck!
+	
+	R.H. Shen, 2021-11-17
+	
+	---------------------------------------------
+	
+	我花费了数天，才使程序正常运行！
+	
+	这是一个改进版的ParaDiS位错动力学模拟软件，它考虑了析出相对位错的阻碍作用。这些程序是结合两处的代码而成的，具体请参考https://github.com/minizmy/ParaDiS 以及 https://e-cam.readthedocs.io/en/latest/Meso-Multi-Scale-Modelling-Modules/modules/paradis_precipitate/paradis_precipitate_GC/readme.html。
+	
+	我的运行环境是：Windows7, Cygwin 2.909 (64 bit) with gcc 11.2.0-1, libX11-devel 1.7.2-1, make 4.3-1
+	
+	## 运行的一些建议
+	1. 删除/bin文件夹以及/src和/utilities文件夹下的所有*.o文件
+	
+	2. 注意makefile.setup 和 makefile.sys 这两个文件。比如我的电脑很普通，所以使用gcc来编译，就要保证
+	````CC_SERIAL.cygwin = gcc
+	
+        CPP_SERIAL.cygwin = g++
+	```
+	3. gcc中的一些文件需要被改动，比如：
+	
+	对于 cpp_type_traits.h, 需要这样做:
+	```
+	/*   template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    }; */
+	```
+	注释掉这段代码，否则编译报错，认为struct __is_integer<bool>重复定义。这真的很奇怪，我也不懂为什么。
+	
+	4. 认真阅读 http://paradis.stanford.edu/site/home以及/docs文件夹中的用户手册。祝你成功！
+	沈若涵，2021-11-17

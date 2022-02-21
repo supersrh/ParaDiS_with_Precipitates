@@ -1,0 +1,28 @@
+76c76
+< CC_PARALLEL.linux       = mpiicc
+---
+> CC_PARALLEL.linux       = mpicc
+722c722
+< CPP_PARALLEL.dec.mpich      = mpiCC
+---
+> CPP_PARALLEL.dec.mpich      = mpic++
+1059,1060c1059,1060
+< CCFLAG_PARALLEL.franklin   = -DPARALLEL=1 -D_XT4
+< CPPFLAG_PARALLEL.franklin  = -D_XT4
+---
+> CCFLAG_PARALLEL.franklin   = -DPARALLEL=1 -D_XT4 
+> CPPFLAG_PARALLEL.franklin  = -D_XT4 
+1062,1063c1062,1063
+< CC_SERIAL.franklin         = cc
+< CPP_SERIAL.franklin        = CC
+---
+> CC_SERIAL.franklin         = cc 
+> CPP_SERIAL.franklin        = CC 
+1118c1118
+< CPP_PARALLEL.gcc      = mpicxx
+---
+> CPP_PARALLEL.gcc      = mpic++
+1145c1145
+< MPI_LIB.gcc           = -lmpich
+---
+> MPI_LIB.gcc           = -lmpi
